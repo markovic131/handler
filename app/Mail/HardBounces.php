@@ -30,7 +30,7 @@ class HardBounces extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.hard');
+        return $this->view('mail.hard')
             ->subject("Емаил адресата: <{$this->data['recipient']}> не постои!");
     }
 }
