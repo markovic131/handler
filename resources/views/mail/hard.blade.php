@@ -10,6 +10,6 @@
         {{ $data['message-headers'] }}
     </p>
     <p>
-        {{ $headers->from }}
+        <?php var_dump($headers); ?>
     </p>
 </div>
