@@ -29,7 +29,6 @@ class DroppedMessages extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.dropped')
-            ->subject("Пораката наменета за <{$this->data['recipient']}> неможе да биде испорачана!");
+        return $this->view('mail.dropped')->subject("Пораката наменета за <{$this->data['recipient']}> неможе да биде испорачана!");
     }
 }
