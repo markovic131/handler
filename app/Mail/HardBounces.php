@@ -12,17 +12,15 @@ class HardBounces extends Mailable
     use Queueable, SerializesModels;
 
     public $data;
-    public $headers;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($request, $headers)
+    public function __construct($request)
     {
         $this->data = $request;
-        $this->headers = $headers;
     }
 
     /**

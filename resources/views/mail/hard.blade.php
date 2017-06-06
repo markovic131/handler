@@ -9,7 +9,4 @@
         <b>Додатни информации:</b><br>
         {{ $data['message-headers'] }}
     </p>
-    <p>
-        <?php var_dump($headers); ?>
-    </p>
 </div>
