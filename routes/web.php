@@ -3,9 +3,9 @@
 
 Route::post('handle/hard', function () {
 
-    $messageHeaders = imap_mime_header_decode(request()->get('message-headers'));
+    //$messageHeaders = imap_mime_header_decode(request()->get('message-headers'));
 
-    return $messageHeaders;
+    //return $messageHeaders;
 
     Mail::to('psybaron@gmail.com')->send(
             new App\Mail\HardBounces(request()->all())
