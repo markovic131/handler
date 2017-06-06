@@ -3,8 +3,8 @@
 
 Route::post('handle/hard', function () {
 
-    $messageHeaders = iconv_mime_decode_headers(request()->get('message-headers'), 0, "ISO-8859-1");
-    dd($messageHeaders['Received']['From']);
+    $messageHeaders = imap_rfc822_parse_headers(request()->get('message-headers'));
+    dd($messageHeaders['Sender']);
     Mail::to('psybaron@gmail.com')->send(
             new App\Mail\HardBounces(request()->all())
         );
