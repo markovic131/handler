@@ -8,7 +8,7 @@ Route::post('handle/hard', function () {
     //dd($messageHeaders->sender);
 
     Mail::to('psybaron@gmail.com')->send(
-            new App\Mail\HardBounces($messageHeaders)
+            new App\Mail\HardBounces(request()->all(), $messageHeaders)
         );
     // request()->get('error');
     // request()->get('recipient');
