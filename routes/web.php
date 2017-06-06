@@ -23,7 +23,7 @@ Route::post('handle/hard', function () {
 Route::post('handle/dropped', function () {
 
     Mail::to('psybaron@gmail.com')->send(
-            new App\Mail\DroppedMessage(request()->all())
+            new App\Mail\DroppedMessages(request()->all())
         );
     // request()->get('error');
     // request()->get('recipient');
