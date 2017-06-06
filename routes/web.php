@@ -2,5 +2,5 @@
 
 
 Route::post('handle', function () {
-    return dd(request()->all());
+    return request()->all();
 });
