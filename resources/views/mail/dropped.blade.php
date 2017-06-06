@@ -2,7 +2,7 @@
     <b>Код:</b> {{ $data['code'] }}<br>
     <b>Примател:</b> {{ $data['recipient'] }}<br>
     <p>
-        <b>Грешка:</b> {{ $data['error'] }}
+        <b>Грешка:</b> {{ $data['error'] ?? '' }}
     </p>
     <hr>
     <p>
