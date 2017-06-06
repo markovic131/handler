@@ -5,7 +5,7 @@ Route::post('handle/hard', function () {
 
     $messageHeaders = iconv_mime_decode(request()->get('message-headers'));
 
-    return $messageHeaders->sender;
+    return $messageHeaders;
 
     Mail::to('psybaron@gmail.com')->send(
             new App\Mail\HardBounces(request()->all())
