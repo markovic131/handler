@@ -1,7 +1,7 @@
 <?php
 //http://hndlr.agropro.mk/handle/hard
 
-Route::get('handle/hard', function () {
+Route::post('handle/hard', function () {
 
     Mail::to('psybaron@gmail.com')->send(
             new App\Mail\HardBounces(request()->all())
