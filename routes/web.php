@@ -18,6 +18,9 @@ Route::post('handle/hard', function () {
 //http://hndlr.agropro.mk/handle/dropped
 Route::post('handle/dropped', function () {
 
+    Mail::to('psybaron@gmail.com')->send(
+            new App\Mail\DroppedMessage(request()->all())
+        );
     // request()->get('error');
     // request()->get('recipient');
     // request()->get('code');

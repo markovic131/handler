@@ -1,12 +1,12 @@
 <div>
-    <b>Recipient:</b> {{ $data['recipient'] }}<br>
-    <b>Code:</b> {{ $data['code'] }}<br>
+    <b>Код:</b> {{ $data['code'] }}<br>
+    <b>Примател:</b> {{ $data['recipient'] }}<br>
     <p>
-        <b>Error:</b> {{ $data['error'] }}
+        <b>Грешка:</b> {{ $data['error'] }}
     </p>
     <hr>
     <p>
-        <b>Headers:</b><br>
+        <b>Додатни информации:</b><br>
         {{ $data['message-headers'] }}
     </p>
 </div>

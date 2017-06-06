@@ -11,14 +11,15 @@ class DroppedMessages extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $data;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($request)
     {
-        //
+        $this->data = $request;
     }
 
     /**
@@ -28,6 +29,7 @@ class DroppedMessages extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.dropped');
+        return $this->view('mail.dropped')
+            ->subject("Пораката наменета за <{$this->data['recipient']}> неможе да биде испорачана!");
     }
 }
