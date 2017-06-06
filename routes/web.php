@@ -5,10 +5,10 @@ Route::post('handle/hard', function () {
 
     $messageHeaders = imap_rfc822_parse_headers(request()->get('message-headers'));
 
-    dd($messageHeaders->sender);
+    //dd($messageHeaders->sender);
 
     Mail::to('psybaron@gmail.com')->send(
-            new App\Mail\HardBounces(request()->all())
+            new App\Mail\HardBounces($messageHeaders)
         );
     // request()->get('error');
     // request()->get('recipient');
