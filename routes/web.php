@@ -3,6 +3,8 @@
 
 Route::post('handle/hard', function () {
 
+    $messageHeaders = iconv_mime_decode_headers(request()->get('message-headers'));
+    dd($messageHeaders);
     Mail::to('psybaron@gmail.com')->send(
             new App\Mail\HardBounces(request()->all())
         );
