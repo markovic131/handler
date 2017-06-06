@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class DroppedMessages extends Mailable implements ShouldQueue
+class DroppedMessages extends Mailable
 {
     use Queueable, SerializesModels;
 

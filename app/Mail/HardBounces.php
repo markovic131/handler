@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class HardBounces extends Mailable implements ShouldQueue
+class HardBounces extends Mailable
 {
     use Queueable, SerializesModels;
 
