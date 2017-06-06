@@ -3,7 +3,7 @@
 
 Route::post('handle/hard', function () {
 
-    $messageHeaders = iconv_mime_decode(request()->get('message-headers'));
+    $messageHeaders = imap_mime_header_decode(request()->get('message-headers'));
 
     return $messageHeaders;
 
