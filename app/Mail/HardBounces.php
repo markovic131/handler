@@ -11,7 +11,7 @@ class HardBounces extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $data;
+    public $data;
 
     /**
      * Create a new message instance.
@@ -31,7 +31,6 @@ class HardBounces extends Mailable
     public function build()
     {
         return $this->view('mail.hard')
-            ->subject("Пораката наменета за <{$this->data['recipient']}< не е испорачана!")
-            ->with(['data' => $this->data]);
+            ->subject("Пораката наменета за <{$this->data['recipient']}> не е испорачана!");
     }
 }
