@@ -7,7 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SpamReport extends Mailable
+class SpamReports extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -30,6 +30,6 @@ class SpamReport extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.report')->subject("Поднесена жалба за СПАМ!");
+        return $this->view('mail.report')->subject("Поднесена СПАМ жалба!");
     }
 }

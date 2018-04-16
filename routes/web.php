@@ -37,7 +37,7 @@ Route::post('handle/dropped', function () {
 Route::post('handle/report', function () {
 
     Mail::to('psybaron@gmail.com')->send(
-            new App\Mail\SpamReportMessages(request()->all())
+            new App\Mail\SpamReports(request()->all())
         );
     // request()->get('error');
     // request()->get('recipient');
