@@ -14,5 +14,6 @@ class VerifyCsrfToken extends BaseVerifier
     protected $except = [
         'handle/hard',
         'handle/dropped',
+        'handle/report',
     ];
 }
